@@ -16,3 +16,4 @@ jobs:
       - name: echo
         run: |
           echo "Environment: ${{ inputs.env }}"
+          echo "Environment: ${{ secrets.TOKEN }}"
