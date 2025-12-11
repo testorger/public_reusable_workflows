@@ -1,0 +1,18 @@
+# .github/workflows/deploy.yml
+on:
+  workflow_call:
+    inputs:
+      env:
+        required: true
+        type: string
+    secrets:
+      TOKEN:
+        required: true
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo
+        run: |
+          echo "Environment: ${{ inputs.env }}"
