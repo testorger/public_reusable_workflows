@@ -21,3 +21,5 @@ jobs:
           echo "REPO_SECRET: ${{ secrets.REPO_SECRET }}"
       - name: call composite
         uses: testorger/public_reusable_workflows/.github/actions/sample-composite@main
+        with:
+          parameter1: 'from reusable workflow'
