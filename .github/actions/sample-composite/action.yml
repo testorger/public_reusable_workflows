@@ -3,5 +3,6 @@ runs:
   using: "composite"
   steps:
     - name: composite hello
+      shell: bash
       run: |
         echo "hello composite"
