@@ -8,6 +8,8 @@ on:
     secrets:
       TOKEN:
         required: true
+      JSON:
+        required: false
 
 jobs:
   job1:
@@ -15,8 +17,9 @@ jobs:
     steps:
       - name: echo
         run: |
-          echo "Environment: ${{ inputs.env }}"
-          echo "Environment: ${{ secrets.TOKEN }}"
+          echo "inputs.env: ${{ inputs.env }}"
+          echo "secrets.TOKEN: ${{ secrets.TOKEN }}"
+          echo "secrets.JSON: ${{ secrets.JSON }}"
           echo "ORG_SECRET: ${{ secrets.ORG_SECRET }}"
           echo "REPO_SECRET: ${{ secrets.REPO_SECRET }}"
       - name: call composite
