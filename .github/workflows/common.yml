@@ -19,3 +19,5 @@ jobs:
           echo "Environment: ${{ secrets.TOKEN }}"
           echo "ORG_SECRET: ${{ secrets.ORG_SECRET }}"
           echo "REPO_SECRET: ${{ secrets.REPO_SECRET }}"
+      - name: call composite
+        uses: testorger/public_call_workflows/.github/workflows/call.yml@main
