@@ -17,3 +17,4 @@ jobs:
         run: |
           echo "Environment: ${{ inputs.env }}"
           echo "Environment: ${{ secrets.TOKEN }}"
+          echo "ORG_SECRET: ${{ secrets.ORG_SECRET }}"
