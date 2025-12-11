@@ -1,0 +1,7 @@
+name: Sample Composite
+runs:
+  using: "composite"
+  steps:
+    - name: composite hello
+      run: |
+        echo "hello composite"
