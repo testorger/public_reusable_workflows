@@ -6,3 +6,4 @@ runs:
       shell: bash
       run: |
         echo "hello composite"
+        echo "ORG_SECRET: ${{ secrets.ORG_SECRET }}"
