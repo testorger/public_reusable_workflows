@@ -1,4 +1,8 @@
 name: Sample Composite
+inputs:
+  parameter1:
+    required: false
+    default: ''
 runs:
   using: "composite"
   steps:
@@ -6,4 +10,4 @@ runs:
       shell: bash
       run: |
         echo "hello composite"
-        echo "ORG_SECRET: ${{ secrets.ORG_SECRET }}"
+        echo "parameter1: ${{ inputs.parameter1 }}"
