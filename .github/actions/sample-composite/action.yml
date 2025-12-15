@@ -10,7 +10,7 @@ runs:
       shell: bash
       run: |
         echo "hello composite"
-        echo "parameter1: ${{ inputs.parameter1 }}"
+        echo "ORG_SECRET: ${{ secrets.ORG_SECRET }}"
     - name: test json
       shell: bash
       run: |
