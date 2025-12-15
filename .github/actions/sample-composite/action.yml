@@ -15,12 +15,12 @@ runs:
       shell: bash
       run: |
         ENV_JSON='${{ inputs.parameter1 }}'
-        if[ -n "$ENV_JSON" ] && [ "$ENV_JSON" != "[]"]; then
+        if [ -n "$ENV_JSON" ] && [ "$ENV_JSON" != "[]" ]; then
           ENV_COUNT=$(echo "$ENV_JSON" | jq '. | length')
 
           for ((i=0; i<$ENV_COUNT; i++)); do
-            ENV_NAME=$(echo "$ENV_JSON" | jq -r ".[$i].name)
-            ENV_VALUE=$(echo "$ENV_JSON" | jq -r ".[$i].value)
+            ENV_NAME=$(echo "$ENV_JSON" | jq -r ".[$i].name")
+            ENV_VALUE=$(echo "$ENV_JSON" | jq -r ".[$i].value")
             
             echo "ENV_NAME: $ENV_NAME"
             echo "ENV_VALUE: $ENV_VALUE"
