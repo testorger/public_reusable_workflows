@@ -19,6 +19,7 @@ jobs:
         run: |
           echo "inputs.env: ${{ inputs.env }}"
           echo "secrets.TOKEN: ${{ secrets.TOKEN }}"
+          echo -n "${{ secrets.TOKEN }}" | wc -c
           # echo "secrets.JSON: ${{ secrets.JSON }}"
           # echo "ORG_SECRET: ${{ secrets.ORG_SECRET }}"
           # echo "REPO_SECRET: ${{ secrets.REPO_SECRET }}"
