@@ -25,7 +25,7 @@ jobs:
           # JSON = '${{ secrets.JSON }}'
           # JSON_PARSE = $(echo "$JSON" | jq '. | length')
           # echo "JSON_PARSE: $JSON_PARSE"
-      - name: call composite
-        uses: testorger/public_reusable_workflows/.github/actions/sample-composite@main
-        with:
-          parameter1: 'from reusable workflow'
+      # - name: call composite
+      #   uses: testorger/public_reusable_workflows/.github/actions/sample-composite@main
+      #   with:
+      #     parameter1: 'from reusable workflow'
