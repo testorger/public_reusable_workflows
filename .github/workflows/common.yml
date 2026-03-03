@@ -5,6 +5,10 @@ on:
       env:
         required: true
         type: string
+      flg:
+        required: false
+        type: string
+        default: "false"
     secrets:
       TOKEN:
         required: true
@@ -20,6 +24,13 @@ jobs:
           echo "inputs.env: ${{ inputs.env }}"
           echo "secrets.TOKEN: ${{ secrets.TOKEN }}"
           echo -n "${{ secrets.TOKEN }}" | wc -c
+
+          FLG="${{ inputs.flg }}"
+          if[ "$FLG" = "true" ]; then
+            echo "flg is true!!"
+          else
+            echo "flg is not true!!"
+          fi
           # echo "secrets.JSON: ${{ secrets.JSON }}"
           # echo "ORG_SECRET: ${{ secrets.ORG_SECRET }}"
           # echo "REPO_SECRET: ${{ secrets.REPO_SECRET }}"
