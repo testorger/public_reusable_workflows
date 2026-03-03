@@ -27,9 +27,9 @@ jobs:
 
           FLG="${{ inputs.flg }}"
           if [ "$FLG" = "true" ]; then
-            echo "flg is true!!"
+            # echo "flg is true!!"
           else
-            echo "flg is not true!!"
+            # echo "flg is not true!!"
           fi
           # echo "secrets.JSON: ${{ secrets.JSON }}"
           # echo "ORG_SECRET: ${{ secrets.ORG_SECRET }}"
