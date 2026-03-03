@@ -21,12 +21,12 @@ jobs:
     steps:
       - name: echo
         run: |
-          echo "inputs.env: ${{ inputs.env }}"
-          echo "secrets.TOKEN: ${{ secrets.TOKEN }}"
-          echo -n "${{ secrets.TOKEN }}" | wc -c
+          # echo "inputs.env: ${{ inputs.env }}"
+          # echo "secrets.TOKEN: ${{ secrets.TOKEN }}"
+          # echo -n "${{ secrets.TOKEN }}" | wc -c
 
           FLG="${{ inputs.flg }}"
-          if[ "$FLG" = "true" ]; then
+          if [ "$FLG" = "true" ]; then
             echo "flg is true!!"
           else
             echo "flg is not true!!"
