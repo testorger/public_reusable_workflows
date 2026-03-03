@@ -21,23 +21,9 @@ jobs:
     steps:
       - name: echo
         run: |
-          # echo "inputs.env: ${{ inputs.env }}"
-          # echo "secrets.TOKEN: ${{ secrets.TOKEN }}"
-          # echo -n "${{ secrets.TOKEN }}" | wc -c
-
           FLG="${{ inputs.flg }}"
           if [ "$FLG" = "true" ]; then
             # echo "flg is true!!"
           else
             # echo "flg is not true!!"
           fi
-          # echo "secrets.JSON: ${{ secrets.JSON }}"
-          # echo "ORG_SECRET: ${{ secrets.ORG_SECRET }}"
-          # echo "REPO_SECRET: ${{ secrets.REPO_SECRET }}"
-          # JSON = '${{ secrets.JSON }}'
-          # JSON_PARSE = $(echo "$JSON" | jq '. | length')
-          # echo "JSON_PARSE: $JSON_PARSE"
-      # - name: call composite
-      #   uses: testorger/public_reusable_workflows/.github/actions/sample-composite@main
-      #   with:
-      #     parameter1: 'from reusable workflow'
